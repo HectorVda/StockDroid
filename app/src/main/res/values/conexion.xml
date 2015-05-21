@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wsNameSpace">http://192.168.10.112/DWES/WebService_StockDroid/Webservice</string>
+</resources>

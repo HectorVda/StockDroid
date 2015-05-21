@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.curso.hvalentin.stockdroid" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Almacenes"
+            android:label="@string/title_activity_almacenes" >
+        </activity>
+        <activity
+            android:name=".Registro"
+            android:label="@string/title_activity_registro" >
+        </activity>
+        <activity
+            android:name=".Estanteria"
+            android:label="@string/title_activity_estanteria" >
+        </activity>
+        <activity
+            android:name=".item"
+            android:label="@string/title_activity_item" >
+        </activity>
+        <activity
+            android:name=".CrearAlmacen"
+            android:label="@string/title_activity_crear_almacen" >
+        </activity>
+        <activity
+            android:name=".CrearEstanteria"
+            android:label="@string/title_activity_crear_estanteria" >
+        </activity>
+        <activity
+            android:name=".CrearItem"
+            android:label="@string/title_activity_crear_item" >
+        </activity>
+        <activity
+            android:name=".EditaAlmacen"
+            android:label="@string/title_activity_edita_almacen" >
+        </activity>
+        <activity
+            android:name=".EditaItem"
+            android:label="@string/title_activity_edita_item" >
+        </activity>
+        <activity
+            android:name=".EditaEstanteria"
+            android:label="@string/title_activity_edita_estanteria" >
+        </activity>
+    </application>
+
+</manifest>
