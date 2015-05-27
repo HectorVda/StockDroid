@@ -4,4 +4,9 @@
     tools:context="com.curso.hvalentin.stockdroid.Almacenes">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/search_icon" android:title="@string/btnBuscar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_search"
+        app:showAsAction="ifRoom" />
 </menu>

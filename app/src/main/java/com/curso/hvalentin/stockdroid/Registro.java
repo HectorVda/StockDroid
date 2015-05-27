@@ -1,5 +1,6 @@
 package com.curso.hvalentin.stockdroid;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
@@ -17,7 +18,7 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
 
-public class Registro extends ActionBarActivity {
+public class Registro extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class Registro extends ActionBarActivity {
             }
         });
         Button volver = (Button) findViewById(R.id.btnVolverRegistro);
-        boton.setOnClickListener(new View.OnClickListener() {
+        volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -116,7 +117,7 @@ public class Registro extends ActionBarActivity {
                 }
 
             } else {
-                Toast.makeText(getApplicationContext(), "Fallo en la conexión", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.ErrorConexion), Toast.LENGTH_LONG).show();
             }
         }
     }

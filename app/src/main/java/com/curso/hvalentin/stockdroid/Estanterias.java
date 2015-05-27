@@ -6,12 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class item extends ActionBarActivity {
+public class Estanterias extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_item);
+        setContentView(R.layout.activity_estanteria);
 
         //Llamamos a ActionBar y forzamos icono y comportamiento jerárquico
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
@@ -23,7 +23,7 @@ public class item extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_item, menu);
+        getMenuInflater().inflate(R.menu.menu_estanteria, menu);
         return true;
     }
 

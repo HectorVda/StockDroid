@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/Almacen.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/Almacenes.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/CrearAlmacen.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/CrearEstanteria.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/CrearItem.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/EditaAlmacen.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/Estanterias.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/Registro.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/curso/hvalentin/stockdroid/item.java" charset="UTF-8" />
   </component>
 </project>

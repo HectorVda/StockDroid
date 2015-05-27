@@ -1,6 +1,9 @@
 <resources>
+
     <string name="app_name">StockDroid</string>
     <string name="title_activity_login">Login</string>
+
+    <!-- BOTONES -->
     <string name="login_button_text">Login</string>
     <string name="signUp_button_text">Sign Up</string>
     <string name="action_settings">Settings</string>
@@ -11,13 +14,38 @@
     <string name="btnPass">Contraseña</string>
     <string name="btnPassRepeat">Repita Contraseña</string>
     <string name="btnApellidos">Apellidos</string>
-    <string name="passError">Las contraseñas no coinciden</string>
     <string name="registerError">Usuario incorrecto</string>
     <string name="registerOK">¡BIENVENIDO!</string>
     <string name="btnVolver">Volver</string>
     <string name="btnRegistro">¡Registrarme!</string>
+    <string name="btnLogin">Entrar</string>
+    <string name="btnRegistroLogin">Registrarme</string>
+    <string name="btnAceptar">Aceptar</string>
+    <string name="btnBuscar">Buscar</string>
+
+    <!-- EDITTEXT -->
+    <string name="etCantidad">Cantidad</string>
+    <string name="etNombre">Nombre</string>
+    <string name="etDescripcion">Descripción</string>
+
+    <!-- EXITO -->
+    <string name="EstanteriaCreada">Estantería creada con exito</string>
+    <string name="AlmacenCreado">Almacen creado con exito</string>
+    <string name="ItemCreado">Item creado con exito</string>
+
+    <!-- ERRORES -->
+    <string name="ErrorLogin">Usuario o contraseña incorrecta</string>
+    <string name="ErrorConexion">Fallo en la conexión, asegurese de tener conexión a internet</string>
+    <string name="passError">Las contraseñas no coinciden</string>
+    <string name="ErrorAlmacenes">No se encontró ningún almacén</string>
+    <string name="errorNombreVacio">El Nombre no puede ser vacío</string>
+    <string name="errorArgumentosInvalidos">(o_O")¡Ups!, parece que ha habido un error interno, lo siento, prueba de nuevo</string>
+    <string name="EstanteriaNoCreada">Error al crear la Estantería</string>
+    <string name="AlmacenNoCreada">Error al crear el Almacén</string>
+    <string name="ItemNoCreada">Error al crear el Item</string>
 
 
+    <!-- TITULOS -->
     <string name="title_activity_registro">Registro</string>
     <string name="title_activity_estanteria">Estanteria</string>
     <string name="title_activity_item">item</string>
@@ -27,4 +55,5 @@
     <string name="title_activity_edita_almacen">EditaAlmacen</string>
     <string name="title_activity_edita_item">EditaItem</string>
     <string name="title_activity_edita_estanteria">EditaEstanteria</string>
+    <string name="title_activity_items">items</string>
 </resources>

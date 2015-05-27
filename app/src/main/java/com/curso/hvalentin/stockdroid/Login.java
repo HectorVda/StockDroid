@@ -2,12 +2,15 @@ package com.curso.hvalentin.stockdroid;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import org.ksoap2.SoapEnvelope;
@@ -16,11 +19,17 @@ import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
 public class Login extends Activity {
+private  SharedPreferences.Editor editor;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+
+        //Creamos sesión para guardar usuario
+        SharedPreferences sp= getSharedPreferences("sesion", Context.MODE_PRIVATE);
+        editor = sp.edit();
         Button login = (Button) findViewById(R.id.btnLogin);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,13 +66,15 @@ public class Login extends Activity {
 
         Integer login= 0;
 
-
+private String usuario = "";
         protected Boolean doInBackground(String... params) {
             boolean resultado = true;
 
             SoapObject soapobject = new SoapObject(NAMESPACE, METHOD_NAME);
             soapobject.addProperty("user", params[0]);
             soapobject.addProperty("pass", params[1]);
+
+            usuario=params[0];
 
             SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
             envelope.setOutputSoapObject(soapobject);
@@ -82,14 +93,16 @@ public class Login extends Activity {
         protected void onPostExecute(Boolean result) {
             if (result) {
                 if(login.equals(1)){
-                    Intent intent = new Intent(getApplicationContext(), Almacenes.class);
+                    editor.putString("usuario", usuario);
+                    editor.commit();
+                    Intent intent = new Intent(getApplicationContext(), CrearAlmacen.class);
                     startActivity(intent);
                 }else{
-                    Toast.makeText(getApplicationContext(), "Incorrect user or password", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.ErrorLogin), Toast.LENGTH_LONG).show();
                 }
 
             } else {
-                Toast.makeText(getApplicationContext(), "Fallo en la conexión", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), getString(R.string.ErrorConexion), Toast.LENGTH_LONG).show();
             }
         }
     }
