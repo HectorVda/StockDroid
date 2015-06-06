@@ -21,15 +21,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/etNombreCrearItem"
             android:layout_gravity="center_horizontal"
-            android:text="@string/etNombre" />
+            android:hint="@string/etNombre" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:ems="10"
             android:id="@+id/etCantidadCrearItem"
-            android:text="@string/etCantidad" />
+            android:hint="@string/etCantidad"
+            android:inputType="numberDecimal" />
 
         <EditText
             android:layout_width="match_parent"
@@ -38,7 +38,7 @@
             android:ems="10"
             android:id="@+id/etDescripcionCrearItem"
             android:layout_weight="0.50"
-            android:text="@string/etDescripcion" />
+            android:hint="@string/etDescripcion" />
 
     </LinearLayout>
 

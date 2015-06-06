@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/etNombreEditaAlmacen"
             android:layout_gravity="center_horizontal"
-            android:text="@string/etNombre" />
+            android:hint="@string/etNombre" />
 
         <EditText
             android:layout_width="match_parent"
@@ -30,14 +30,14 @@
             android:ems="10"
             android:id="@+id/etDescripcionEditaAlmacen"
             android:layout_weight="0.50"
-            android:text="@string/etDescripcion" />
+            android:hint="@string/etDescripcion" />
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btnAceptar"
-        android:id="@+id/button4"
+        android:text="@string/btnGuardar"
+        android:id="@+id/btnGuardarEditaAlmacen"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/linearLayout2"
         android:layout_alignEnd="@+id/linearLayout2" />

@@ -28,6 +28,23 @@
             android:gravity="center_vertical|center_horizontal|fill_vertical"
             android:weightSum="1">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnRegistroLogin"
+                android:id="@+id/btnSignUp"
+                android:hint="@string/btnRegistro"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/scrollView2"
+                android:layout_alignEnd="@+id/scrollView2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="right"
+                style="@style/AppTheme"
+                android:clickable="false"
+                android:background="#00f6f6f6"
+                android:textColor="#ff575eff" />
+
             <ImageView
                 android:layout_width="154dp"
                 android:layout_height="wrap_content"
@@ -55,7 +72,8 @@
                 android:id="@+id/etUsuario"
                 android:hint="User"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp" />
+                android:layout_marginTop="10dp"
+                style="@style/AppTheme" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -64,47 +82,25 @@
                 android:ems="10"
                 android:id="@+id/etPassword"
                 android:hint="Password"
-                android:layout_marginBottom="20dp" />
+                android:layout_marginBottom="20dp"
+                style="@style/AppTheme" />
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="258dp"
+                android:layout_height="210dp"
                 android:gravity="fill_vertical">
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal|fill_vertical"
-                    android:layout_weight="2.21"
-                    android:layout_marginBottom="0dp" >
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/btnLogin"
-                        android:id="@+id/btnLogin"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@android:color/holo_blue_dark"
-                        android:hint="Login"
-                        android:layout_marginTop="0dp"
-                        android:textColor="#fff" />
-                </LinearLayout>
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/btnRegistroLogin"
-                    android:id="@+id/btnSignUp"
-                    android:background="@android:color/darker_gray"
-                    android:hint="Login"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignRight="@+id/scrollView2"
-                    android:layout_alignEnd="@+id/scrollView2"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:text="@string/btnLogin"
+                    android:id="@+id/btnLogin"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="@string/btnLogin"
+                    android:layout_marginTop="0dp"
+                    android:textColor="#fff"
+                    style="@style/AppTheme" />
 
             </LinearLayout>
 

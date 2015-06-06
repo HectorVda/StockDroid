@@ -1,4 +1,4 @@
-package com.curso.hvalentin.stockdroid;
+package com.curso.hvalentin.stockdroid.Clases;
 
 /**
  * Created by Héctor Valentín Úbeda on 25/05/2015.

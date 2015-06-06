@@ -18,23 +18,21 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
-
+/**
+ * Crea un item en la estantería correspondiente
+ */
 public class CrearItem extends ActionBarActivity {
-    private String usuario;
+
     private String codigoEstanteria = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_item);
 
-        //Obetenemos el usuario de la sesion
+        //Obetenemos de la sesión el código de Estantería seleccionada
         SharedPreferences sp = getSharedPreferences("sesion", Context.MODE_PRIVATE);
-        usuario = sp.getString("usuario", "");
-        codigoEstanteria=sp.getString("codigoEstanteria", "");
-        //Si el usuario es vacío salimos de la activity
-        if (usuario.equals("")){
-            finish();
-        }
+        codigoEstanteria=sp.getString("CodigoEstanteria", "");
+
 
         //Llamamos a ActionBar y forzamos icono y comportamiento jerárquico
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
@@ -49,12 +47,15 @@ public class CrearItem extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
+                /**
+                 * Obtenemos los datos introducidos
+                 */
                 String nombre = ((EditText) findViewById(R.id.etNombreCrearItem)).getText().toString();
                 String cantidad = ((EditText) findViewById(R.id.etCantidadCrearItem)).getText().toString();
                 String descripcion = ((EditText) findViewById(R.id.etDescripcionCrearItem)).getText().toString();
 
                 if (nombre != "") {
-                    new CreaAlmacenWs().execute(nombre, cantidad, descripcion, codigoEstanteria);
+                    new CreaItemWs().execute(nombre, cantidad, descripcion, codigoEstanteria);
                 } else {
                     Toast.makeText(getApplicationContext(), getString(R.string.errorNombreVacio), Toast.LENGTH_LONG).show();
                 }
@@ -71,21 +72,23 @@ public class CrearItem extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
+        // Handle action bar item_generic clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
 
-
-    private class CreaAlmacenWs extends AsyncTask<String, Integer, Boolean> {
+    /**
+     * Clase que se encarga de crear un item
+     *
+     * SOAP
+     */
+    private class CreaItemWs extends AsyncTask<String, Integer, Boolean> {
         final String NAMESPACE = getString(R.string.wsNameSpace);
         final String URL = NAMESPACE + "/SoapServer.php?wsdl";
         final String METHOD_NAME = "createItem";
@@ -124,10 +127,10 @@ public class CrearItem extends ActionBarActivity {
             if (result) {
                 if (creado.equals(1)) {
                     Intent intent = new Intent(getApplicationContext(), items.class);
-                    Toast.makeText(getApplicationContext(), getString(R.string.AlmacenCreado), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.ItemCreado), Toast.LENGTH_LONG).show();
                     startActivity(intent);
                 } else {
-                    Toast.makeText(getApplicationContext(), getString(R.string.AlmacenNoCreada), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.ItemNoCreada), Toast.LENGTH_LONG).show();
                 }
 
             } else {

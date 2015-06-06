@@ -13,9 +13,7 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity
-            android:name=".Login"
-            android:label="@string/title_activity_login" >
+        <activity android:name=".Login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +23,7 @@
         <activity
             android:name=".Almacenes"
             android:label="@string/title_activity_almacenes"
-            android:parentActivityName=".Login" >
+            >
         </activity>
         <activity
             android:name=".Registro"
@@ -39,35 +37,47 @@
         <activity
             android:name=".item"
             android:label="@string/title_activity_item"
-            android:parentActivityName=".Estanterias" >
+            android:parentActivityName=".items" >
         </activity>
         <activity
             android:name=".CrearAlmacen"
-            android:label="@string/title_activity_crear_almacen" >
+            android:label="@string/title_activity_crear_almacen"
+            android:parentActivityName=".Almacenes" >
         </activity>
         <activity
             android:name=".CrearEstanteria"
-            android:label="@string/title_activity_crear_estanteria" >
+            android:label="@string/title_activity_crear_estanteria"
+            android:parentActivityName=".Estanterias" >
         </activity>
         <activity
             android:name=".CrearItem"
-            android:label="@string/title_activity_crear_item" >
+            android:label="@string/title_activity_crear_item"
+            android:parentActivityName=".items" >
         </activity>
         <activity
             android:name=".EditaAlmacen"
-            android:label="@string/title_activity_edita_almacen" >
+            android:label="@string/title_activity_edita_almacen"
+            android:parentActivityName=".Almacenes" >
         </activity>
         <activity
             android:name=".EditaItem"
-            android:label="@string/title_activity_edita_item" >
+            android:label="@string/title_activity_edita_item"
+            android:parentActivityName=".items" >
         </activity>
         <activity
             android:name=".EditaEstanteria"
-            android:label="@string/title_activity_edita_estanteria" >
+            android:label="@string/title_activity_edita_estanteria"
+            android:parentActivityName=".Estanterias" >
         </activity>
         <activity
             android:name=".items"
-            android:label="@string/title_activity_items" >
+            android:label="@string/title_activity_items"
+            android:parentActivityName=".Estanterias" >
+        </activity>
+        <activity
+            android:name=".CompartirAlmacen"
+            android:label="@string/title_activity_compartir_almacen"
+            android:parentActivityName=".Estanterias" >
         </activity>
     </application>
 

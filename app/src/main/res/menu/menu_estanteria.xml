@@ -2,6 +2,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.curso.hvalentin.stockdroid.Estanterias">
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+  <!--  <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="100" app:showAsAction="never" /> -->
+
+
+    <item android:id="@+id/add_icon" android:title="@string/btnAdd"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_new"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/edit_icon" android:title="@string/btnEditarAlmacen"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_edit"
+        app:showAsAction="never" />
+    <item android:id="@+id/delete_icon" android:title="@string/btnEliminar"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_clear_black_24dp"
+        app:showAsAction="never" />
+    <item android:id="@+id/share_icon" android:title="@string/btnCompartir"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_share_black_24dp"
+        app:showAsAction="never" />
+
+
+
 </menu>

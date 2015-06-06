@@ -17,7 +17,9 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
-
+/**
+ * Clase encargada de registrar un nuevo usuario
+ */
 public class Registro extends Activity {
 
     @Override
@@ -28,6 +30,9 @@ public class Registro extends Activity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 * Obtenemos los diferentes datos
+                 */
                 String usuario = ((EditText) findViewById(R.id.etUsuarioRegister)).getText().toString();
                 String pass = ((EditText) findViewById(R.id.etPasswordRegister)).getText().toString();
                 String pass2 = ((EditText) findViewById(R.id.etPassRepeat)).getText().toString();
@@ -35,14 +40,22 @@ public class Registro extends Activity {
                 String apellidos = ((EditText) findViewById(R.id.etApellidosRegister)).getText().toString();
 
                 if(pass.equals(pass2)){
+                    /**
+                     * Si ha introducido bien la contraseña en las dos ocasiones,
+                     * registramos al usuario
+                     */
                     new RegistraWS().execute(usuario, pass, nombre, apellidos);
                 }else{
+                    //Si las contraseñas no son iguales se le indica al usuario
                     Toast.makeText(getApplicationContext(), getString(R.string.passError), Toast.LENGTH_LONG).show();
                 }
 
 
             }
         });
+        /**
+         * Si pulsamos sobre volver finalizamos la activity
+         */
         Button volver = (Button) findViewById(R.id.btnVolverRegistro);
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,18 +74,31 @@ public class Registro extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
+        // Handle action bar item_generic clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+
 
         return super.onOptionsItemSelected(item);
     }
+
+    /**
+     * Si pulsamos en el botón nativo Atras finalizamos la activity
+     */
+    public void onBackPressed() {
+
+        finish();
+
+    }
+
+    /**
+     * Clase encargada de registrar al usuario
+     *
+     * SOAP
+     */
     private class RegistraWS extends AsyncTask<String, Integer, Boolean> {
         final String NAMESPACE = getString(R.string.wsNameSpace);
         final String URL = NAMESPACE + "/SoapServer.php?wsdl";

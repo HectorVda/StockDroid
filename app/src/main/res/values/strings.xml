@@ -1,14 +1,14 @@
 <resources>
 
-    <string name="app_name">StockDroid</string>
-    <string name="title_activity_login">Login</string>
+    <string name="app_name" translatable="false">StockDroid</string>
+    <string name="title_activity_login" translatable="false">Login</string>
 
     <!-- BOTONES -->
     <string name="login_button_text">Login</string>
     <string name="signUp_button_text">Sign Up</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ajustes</string>
     <string name="title_activity_almacenes">Almacenes</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
     <string name="btnUsuario">Usuario</string>
     <string name="btnNombre">Nombre</string>
     <string name="btnPass">Contraseña</string>
@@ -22,16 +22,27 @@
     <string name="btnRegistroLogin">Registrarme</string>
     <string name="btnAceptar">Aceptar</string>
     <string name="btnBuscar">Buscar</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnCrear">Crear</string>
+    <string name="btnAdd">Crear</string>
+    <string name="btnEditarAlmacen">Editar Almacen</string>
+    <string name="btnEditarEstanteria">Editar Estantería</string>
+    <string name="btnEliminar">Eliminar</string>
+    <string name="btnCompartir">Compartir Almacen</string>
 
     <!-- EDITTEXT -->
     <string name="etCantidad">Cantidad</string>
     <string name="etNombre">Nombre</string>
     <string name="etDescripcion">Descripción</string>
+    <string name="labelUsuarioCompartir">Inserta el nombre de usuario que deseas añadir a tu almacén</string>
 
     <!-- EXITO -->
     <string name="EstanteriaCreada">Estantería creada con exito</string>
     <string name="AlmacenCreado">Almacen creado con exito</string>
     <string name="ItemCreado">Item creado con exito</string>
+    <string name="updateOK">Modificado con éxito</string>
+    <string name="compartirOK">Usuario añadido con éxito</string>
+
 
     <!-- ERRORES -->
     <string name="ErrorLogin">Usuario o contraseña incorrecta</string>
@@ -43,17 +54,28 @@
     <string name="EstanteriaNoCreada">Error al crear la Estantería</string>
     <string name="AlmacenNoCreada">Error al crear el Almacén</string>
     <string name="ItemNoCreada">Error al crear el Item</string>
+    <string name="updateError">Ha ocurrido un error y no ha podido ser actualizado, por favor intentelo de nuevo</string>
+    <string name="deleteError">Ha ocurrido un fallo al intentar eliminar.</string>
+    <string name="errorCompartir">No se pudo añadir al usuario, vuelva a intentarlo</string>
 
+    <!-- Avisos -->
+    <string name="Aviso">Aviso</string>
+    <string name="ConfirmaBorrar">¿Estás seguro de querer borrar este almacén?
+    Tenga en cuenta que si es usted el creador el almacén quedará borrado permanentemente del sistema.</string>
+    <string name="CargandoAlmacenes">Cargando sus Almacénes</string>
+     <string name="ConfirmaBorrarEstateria">¿Estás seguro de querer borrar la estantería?</string>
+    <string name="confirmaSalir">¿Salir de la aplicación?</string>
 
     <!-- TITULOS -->
     <string name="title_activity_registro">Registro</string>
     <string name="title_activity_estanteria">Estanteria</string>
-    <string name="title_activity_item">item</string>
-    <string name="title_activity_crear_almacen">crearAlmacen</string>
-    <string name="title_activity_crear_estanteria">CrearEstanteria</string>
-    <string name="title_activity_crear_item">crearItem</string>
-    <string name="title_activity_edita_almacen">EditaAlmacen</string>
-    <string name="title_activity_edita_item">EditaItem</string>
-    <string name="title_activity_edita_estanteria">EditaEstanteria</string>
-    <string name="title_activity_items">items</string>
+    <string name="title_activity_item" translatable="false">item</string>
+    <string name="title_activity_crear_almacen">Crear Almacen</string>
+    <string name="title_activity_crear_estanteria">Crear Estanteria</string>
+    <string name="title_activity_crear_item">Crear Item</string>
+    <string name="title_activity_edita_almacen" translatable="false">Editar Almacen</string>
+    <string name="title_activity_edita_item">Editar Item</string>
+    <string name="title_activity_edita_estanteria" translatable="false">Editar Estanteria</string>
+    <string name="title_activity_items" translatable="false">items</string>
+    <string name="title_activity_compartir_almacen" translatable="false">CompartirAlmacen</string>
 </resources>

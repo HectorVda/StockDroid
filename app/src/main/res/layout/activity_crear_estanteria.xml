@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/etNombreCrearEstanteria"
             android:layout_gravity="center_horizontal"
-            android:text="@string/etNombre" />
+            android:hint="@string/etNombre" />
 
         <EditText
             android:layout_width="match_parent"
@@ -28,8 +28,7 @@
             android:inputType="textMultiLine"
             android:ems="10"
             android:id="@+id/etDescripcionCrearEstanteria"
-            android:layout_weight="0.50"
-            android:text="@string/etDescripcion" />
+            android:layout_weight="0.50" />
 
     </LinearLayout>
 
