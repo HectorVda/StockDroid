@@ -170,6 +170,7 @@ public class Almacenes extends ActionBarActivity {
                         /**
                          * Si el usuario acepta borramos los datos de sesion y cerramos
                          */
+                        editor= sp.edit();
                         editor.clear();
                         editor.commit();
                         finish();

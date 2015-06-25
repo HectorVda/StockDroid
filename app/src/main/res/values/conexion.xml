@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="wsNameSpace" translatable="false">http://192.168.20.8/DWES/WebService_StockDroid/Webservice</string>
-    <string name="RESTurl" translatable="false">http://192.168.20.8/DWES/WebService_StockDroid/Webservice/REST.php</string>
+    <string name="wsNameSpace" translatable="false">http://10.1.1.31/DWES/WebService_StockDroid/Webservice</string>
+    <string name="RESTurl" translatable="false">http://10.1.1.31/DWES/WebService_StockDroid/Webservice/REST.php</string>
 </resources>

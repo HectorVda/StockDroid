@@ -135,7 +135,7 @@ public class Registro extends Activity {
         protected void onPostExecute(Boolean result) {
             if (result) {
                 if (registro.equals(1)) {
-                    Intent intent = new Intent(getApplicationContext(), Almacenes.class);
+                    Intent intent = new Intent(getApplicationContext(), Login.class);
                     Toast.makeText(getApplicationContext(), getString(R.string.registerOK), Toast.LENGTH_LONG).show();
                     startActivity(intent);
                 } else {
